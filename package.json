@@ -16,8 +16,13 @@
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "babel-plugin-react-compiler": "1.0.0",
+    "daisyui": "^5.7.50",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "lucide-react": "^1.66.0",
+    "react-is": "^19.3.1",
+    "react-toastify": "^11.2.0",
+    "recharts": "^3.10.1",
     "tailwindcss": "^4"
   }
 }
