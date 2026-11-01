@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"name": "Sarah Jenkins",
+		"picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "sarah.jenkins@gmail.com",
+		"days_since_contact": 16,
+		"status": "overdue",
+		"tags": ["college", "close friend"],
+		"bio": "Former roommate from NYU. We try to catch up over coffee whenever she's in town.",
+		"goal": 14,
+		"next_due_date": "2024-05-18"
+	},
+	{
+		"id": 2,
+		"name": "Marcus Chen",
+		"picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "m.chen@techcorp.io",
+		"days_since_contact": 28,
+		"status": "overdue",
+		"tags": ["work", "mentor"],
+		"bio": "My first manager. He taught me the ropes and we still grab lunch to talk career advice.",
+		"goal": 21,
+		"next_due_date": "2024-05-10"
+	},
+	{
+		"id": 3,
+		"name": "Elena Rodriguez",
+		"picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "elena.rod@yahoo.com",
+		"days_since_contact": 27,
+		"status": "almost due",
+		"tags": ["family", "local"],
+		"bio": "My cousin. She just had her second baby, so I need to check in and see how she's holding up.",
+		"goal": 30,
+		"next_due_date": "2024-05-23"
+	},
+	{
+		"id": 4,
+		"name": "David Kim",
+		"picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "david.kim@outlook.com",
+		"days_since_contact": 3,
+		"status": "on-track",
+		"tags": ["gym", "hobby"],
+		"bio": "My lifting partner. We usually text a few times a week to coordinate our workout schedule.",
+		"goal": 7,
+		"next_due_date": "2024-05-22"
+	},
+	{
+		"id": 5,
+		"name": "Priya Patel",
+		"picture": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "priya.patel@designstudio.com",
+		"days_since_contact": 44,
+		"status": "overdue",
+		"tags": ["networking", "design"],
+		"bio": "Met at a UX conference last year. Brilliant designer, we promised to review each other's portfolios.",
+		"goal": 30,
+		"next_due_date": "2024-04-28"
+	},
+	{
+		"id": 6,
+		"name": "Tommy O'Brien",
+		"picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "t.obrien@email.com",
+		"days_since_contact": 11,
+		"status": "almost due",
+		"tags": ["childhood", "close friend"],
+		"bio": "Grew up on the same street. He's getting married next year and I'm helping him plan the bachelor trip.",
+		"goal": 14,
+		"next_due_date": "2024-05-13"
+	},
+	{
+		"id": 7,
+		"name": "Aisha Al-Farsi",
+		"picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "aisha.alfarsi@gmail.com",
+		"days_since_contact": 58,
+		"status": "overdue",
+		"tags": ["book club", "friend"],
+		"bio": "Organizer of the local sci-fi book club. I missed the last two meetings, should apologize.",
+		"goal": 30,
+		"next_due_date": "2024-04-15"
+	},
+	{
+		"id": 8,
+		"name": "Leo Martinez",
+		"picture": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "leo.martinez@freelance.net",
+		"days_since_contact": 85,
+		"status": "overdue",
+		"tags": ["work", "referral"],
+		"bio": "A client I worked with two years ago. It's been a while, I should send a quick email to see how his startup is doing.",
+		"goal": 90,
+		"next_due_date": "2024-05-27"
+	},
+	{
+		"id": 9,
+		"name": "Chloe Dubois",
+		"picture": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "chloe.dubois@artmail.fr",
+		"days_since_contact": 2,
+		"status": "on-track",
+		"tags": ["penpal", "travel"],
+		"bio": "Met while backpacking in Europe. We send each other postcards and long voice notes every month.",
+		"goal": 30,
+		"next_due_date": "2024-06-01"
+	},
+	{
+		"id": 10,
+		"name": "James Wilson",
+		"picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150",
+		"email": "jwilson@neighbor.com",
+		"days_since_contact": 5,
+		"status": "almost due",
+		"tags": ["neighbor", "borrow tools"],
+		"bio": "Lives next door. We usually chat over the fence, but I owe him my hedge trimmer back this week.",
+		"goal": 7,
+		"next_due_date": "2024-05-17"
+	}
+]
