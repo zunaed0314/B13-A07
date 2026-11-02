@@ -1,17 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FriendCard = ({ friend }) => {
     let bg_color;
     if(friend.status==='overdue'){
-        bg_color='bg-red-600'
+        bg_color='bg-red-400'
     }else if(friend.status==='almost due'){
-        bg_color = 'bg-orange-400'
+        bg_color = 'bg-orange-300'
     }else{
         bg_color='bg-green-800'
     }
 	return (
-		<div className="flex flex-col justify-center items-center transform-transition duration-300 hover:scale-102 border border-gray-100 px-8 py-8 h-full rounded-3xl shadow-lg space-y-1">
+		<div className="flex flex-col justify-center items-center transform-transition duration-300 hover:scale-102 border border-gray-100 px-8 py-8 h-full rounded-xl shadow-lg space-y-1">
 			<div className="avatar">
 				<div className="w-24 rounded-full">
 					<Image
@@ -27,7 +28,7 @@ const FriendCard = ({ friend }) => {
             <p className='text-gray-600'>{friend.days_since_contact}d ago</p>
             <div className='flex gap-2'>
                 {
-                    friend.tags.map((tag,index) => <p key={index} className='px-3 py-1 text-green-800 bg-green-300 rounded-full text-black'>
+                    friend.tags.map((tag,index) => <p key={index} className='px-3 py-1 text-green-800 bg-green-200 rounded-full text-black'>
                         {tag}
                     </p>)
                 }

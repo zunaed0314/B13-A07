@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 import friends from "../../public/data.json";
 import FriendCard from "./components/FriendCard/FriendCard";
+import Link from "next/link";
 export default function Home() {
 	const friendsPromise = fetch("/data.json").then((res) => res.json());
 	return (
@@ -18,32 +19,36 @@ export default function Home() {
 				Add Friend
 			</button>
 			<div className="grid grid-cols-4 container mx-auto gap-6">
-				<div className="px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
-					<p className="text-green-900 text-4xl">10</p>
+				<div className="bg-base-100 px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
+					<p className="text-green-900 text-4xl font-semibold">10</p>
 					<p>Friends</p>
 				</div>
-				<div className="px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
-					<p className="text-green-900 text-4xl">10</p>
-					<p>Friends</p>
+				<div className="bg-base-100 px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
+					<p className="text-green-900 text-4xl font-semibold">3</p>
+					<p>On-Track</p>
 				</div>
-				<div className="px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
-					<p className="text-green-900 text-4xl">10</p>
-					<p>Friends</p>
+				<div className="bg-base-100 px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
+					<p className="text-green-900 text-4xl font-semibold">6</p>
+					<p>Need attention</p>
 				</div>
-				<div className="px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
-					<p className="text-green-900 text-4xl">10</p>
-					<p>Friends</p>
+				<div className="bg-base-100 px-10 py-5 border border-gray-100 transform-transition duration-300 hover:scale-102 flex flex-col justify-center items-center shadow-md">
+					<p className="text-green-900 text-4xl font-semibold">12</p>
+					<p>Interactions this month</p>
 				</div>
 			</div>
-			<div className=' container mx-auto border-t border-gray-200 mt-5 pt-10 space-y-5'>
+			<div className=" container mx-auto border-t border-gray-200 mt-5 pt-10 space-y-5">
 				<p className="text-3xl text-black font-semibold">Your Friends</p>
-				<div className="grid grid-cols-4 gap-5">
+				<div className="grid grid-cols-4 gap-5 mb-20">
 					{friends.map((friend) => (
-						<div key={friend.id}>
+						<Link
+							href={`/${friend.id}`}
+							key={friend.id}
+							className="block h-full bg-base-100"
+						>
 							<FriendCard friend={friend}></FriendCard>
-						</div>
+						</Link>
 					))}
-				</div>	
+				</div>
 			</div>
 		</div>
 	);
