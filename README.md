@@ -14,7 +14,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router, Server Components, Turbopack)
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Server Components, Turbopack)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **UI Components:** [DaisyUI v5](https://daisyui.com/)
 - **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)

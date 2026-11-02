@@ -22,7 +22,7 @@ const StatsPage = () => {
 	const totalEntries = calls.length + texts.length + videos.length;
 
 	return (
-		<div className="container mx-auto mt-30 space-y-5 px-10 md:px-35">
+		<div className="container mx-auto mt-30 space-y-5 px-5 md:px-10 lg:px-35">
 			<h1 className="text-center text-xl font-bold md:text-start md:text-3xl">Friendship analytics</h1>
 
 			<div className="rounded-lg bg-white p-5 shadow-md">

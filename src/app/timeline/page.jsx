@@ -31,7 +31,7 @@ const TimelinePage = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex-1 space-y-5 px-6 pt-20 md:px-35">
+		<div className="container mx-auto flex-1 space-y-5 pt-20 px-5 md:px-10 lg:px-35">
 			<h1 className="text-3xl font-bold">Timeline</h1>
 
 			<div className="flex items-center gap-5">

@@ -21,8 +21,8 @@ const Navbar = () => {
 
 	return (
 		<div>
-			<nav className="bg-base-100 fixed top-0 z-50 w-full px-3 md:px-8 shadow-sm">
-				<div className="navbar container mx-auto">
+			<nav className="bg-base-100 fixed top-0 z-50 w-full shadow-sm">
+				<div className="navbar w-full px-2 md:px-5 lg:px-8">
 					<div className="flex-1">
 						<Link href="/" className="">
 							{/* <div className="flex gap-0">
@@ -35,7 +35,7 @@ const Navbar = () => {
 								width={0}
 								height={0}
 								sizes="100vw"
-								className="h-8 w-auto" // Set height to 48px, width adjusts automatically
+								className="h-8 w-auto"
 							/>
 						</Link>
 					</div>
@@ -65,7 +65,7 @@ const Navbar = () => {
 								</li>
 							</ul>
 						</div>
-						<ul className="menu menu-horizontal hidden gap-4 px-1 md:flex">
+						<ul className="menu menu-horizontal gap-4 px-1 hidden md:flex">
 							<li>
 								<Link href="/" className={pathName === "/" ? "bg-green-900 text-white" : "text-black"}>
 									<House className="h-5 w-5" />

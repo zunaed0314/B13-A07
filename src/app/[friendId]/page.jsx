@@ -32,7 +32,7 @@ const FriendsDetailsPage = async ({ params }) => {
 	}
 
 	return (
-		<div className="container mx-auto mt-25 grid grid-cols-1 gap-3 px-6 md:grid-cols-5 lg:px-35">
+		<div className="container mx-auto mt-25 grid grid-cols-1 gap-3 px-6 md:grid-cols-5 md:px-10 lg:px-35">
 			<div className="bg-base-100 md:col-span-2 md:row-span-2">
 				<FriendCard friend={friend} />
 			</div>
