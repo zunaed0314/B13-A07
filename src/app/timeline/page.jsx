@@ -31,7 +31,7 @@ const TimelinePage = () => {
 	};
 
 	return (
-		<div className="container mx-auto pt-20 flex-1 space-y-5 px-6 md:px-35">
+		<div className="container mx-auto flex-1 space-y-5 px-6 pt-20 md:px-35">
 			<h1 className="text-3xl font-bold">Timeline</h1>
 
 			<div className="flex items-center gap-5">
@@ -67,9 +67,7 @@ const TimelinePage = () => {
 
 			<div className="flex flex-col gap-3">
 				{selectedEntries.length === 0 ? (
-					<p className="bg-base-100 rounded-lg border border-gray-100 p-5 text-gray-500 shadow-sm">
-						No check-ins yet. Go to Home page to log one!
-					</p>
+					<p className="bg-base-100 rounded-lg border border-gray-100 p-5 text-gray-500 shadow-sm">No check-ins yet. Go to Home page to log one!</p>
 				) : (
 					selectedEntries.map((entry) => (
 						<div key={entry.id}>
