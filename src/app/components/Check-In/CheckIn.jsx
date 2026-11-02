@@ -26,9 +26,11 @@ const CheckIn = ({ friend }) => {
 
 		addEntry({
 			id: `${friend.id}-${medium}-${Date.now()}`,
-			line: `${medium} with ${friend.name}`,
+			name: friend.name,
 			date: formattedDate,
-			medium: `${medium}`
+			medium: `${medium}`,
+			date2: date.toLocaleDateString()
+			// name: `${friend.name}`
 		});
 	};
 

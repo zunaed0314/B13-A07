@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { Roboto, Merriweather } from "next/font/google";
 import Image from "next/image";
-import { ChartLine, Clock3, House } from "lucide-react";
+import { ChartLine, Clock3, House, Menu } from "lucide-react";
 
 const roboto = Roboto({
 	weight: "400",
@@ -21,7 +21,7 @@ const Navbar = () => {
 
 	return (
 		<div>
-			<nav className="bg-base-100 shadow-sm fixed top-0 w-full z-50 px-8">
+			<nav className="bg-base-100 fixed top-0 z-50 w-full px-3 md:px-8 shadow-sm">
 				<div className="navbar container mx-auto">
 					<div className="flex-1">
 						<Link href="/" className="">
@@ -35,46 +35,52 @@ const Navbar = () => {
 								width={0}
 								height={0}
 								sizes="100vw"
-								className="w-auto h-8" // Set height to 48px, width adjusts automatically
+								className="h-8 w-auto" // Set height to 48px, width adjusts automatically
 							/>
 						</Link>
 					</div>
 					<div className="flex-none">
-						<ul className="menu menu-horizontal px-1 gap-4">
+						<div className="dropdown dropdown-end block md:hidden">
+							<div tabIndex={0} role="button" className="btn m-1">
+								<Menu />
+							</div>
+							<ul tabIndex={-1} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+								<li>
+									<Link href="/" className={pathName === "/" ? "bg-green-900 text-white" : "text-black"}>
+										<House className="h-5 w-5" />
+										<span>Home</span>
+									</Link>
+								</li>
+								<li>
+									<Link href="/timeline" className={pathName === "/timeline" ? "bg-green-900 text-white" : "text-black"}>
+										<Clock3 className="h-5 w-5" />
+										<span>Timeline</span>
+									</Link>
+								</li>
+								<li>
+									<Link href="/stats" className={pathName === "/stats" ? "bg-green-900 text-white" : "text-black"}>
+										<ChartLine className="h-5 w-5" />
+										<span>Stats</span>
+									</Link>
+								</li>
+							</ul>
+						</div>
+						<ul className="menu menu-horizontal hidden gap-4 px-1 md:flex">
 							<li>
-								<Link
-									href="/"
-									className={
-										pathName === "/" ? "bg-green-900 text-white" : "text-black"
-									}
-								>
-									<House className="w-5 h-5" />
+								<Link href="/" className={pathName === "/" ? "bg-green-900 text-white" : "text-black"}>
+									<House className="h-5 w-5" />
 									<span>Home</span>
 								</Link>
 							</li>
 							<li>
-								<Link
-									href="/timeline"
-									className={
-										pathName === "/timeline"
-											? "bg-green-900 text-white"
-											: "text-black"
-									}
-								>
-									<Clock3 className="w-5 h-5" />
+								<Link href="/timeline" className={pathName === "/timeline" ? "bg-green-900 text-white" : "text-black"}>
+									<Clock3 className="h-5 w-5" />
 									<span>Timeline</span>
 								</Link>
 							</li>
 							<li>
-								<Link
-									href="/stats"
-									className={
-										pathName === "/stats"
-											? "bg-green-900 text-white"
-											: "text-black"
-									}
-								>
-									<ChartLine className='w-5 h-5'/>
+								<Link href="/stats" className={pathName === "/stats" ? "bg-green-900 text-white" : "text-black"}>
+									<ChartLine className="h-5 w-5" />
 									<span>Stats</span>
 								</Link>
 							</li>
