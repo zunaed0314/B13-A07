@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌱 KeenKeeper
 
-## Getting Started
+**KeenKeeper** is a personal relationship management app designed to help you maintain meaningful connections. It acts as a "personal shelf" for your friends, allowing you to track how long it's been since you last spoke, set relationship goals, and log your interactions (Calls, Texts, Videos).
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Friend Dashboard:** View all your friends in a clean, responsive grid.
+- **Smart Status Tracking:** Automatically categorizes friends as `Overdue`, `Almost Due`, or `On-Track` based on your custom relationship goals.
+- **Quick Check-In:** Log interactions (Call, Text, Video) with a single click.
+- **Timeline History:** A global timeline that logs every interaction, complete with a filter and search function.
+- **Friendship Analytics:** Visualized stats (using Recharts) to show your interaction breakdown by medium.
+- **Custom 404 Page:** Graceful error handling for missing friends or wrong URLs.
+- **Toast Notifications:** Instant feedback when you log a check-in.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router, Server Components, Turbopack)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [DaisyUI v5](https://daisyui.com/)
+- **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Charts:** [Recharts](https://recharts.org/)
+- **State Management:** React Context API
+- **Notifications:** React Toastify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+Follow these steps to run the project locally.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You need Node.js (v20.9.0 or higher) installed on your machine.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zunaed0314/B13-A07.git
+   ```
