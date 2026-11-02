@@ -2,6 +2,8 @@
 
 **KeenKeeper** is a personal relationship management app designed to help you maintain meaningful connections. It acts as a "personal shelf" for your friends, allowing you to track how long it's been since you last spoke, set relationship goals, and log your interactions (Calls, Texts, Videos).
 
+### 🔗 [Live Demo - View KeenKeeper](https://keen-keeper-ochre.vercel.app/)
+
 ## ✨ Features
 
 - **Friend Dashboard:** View all your friends in a clean, responsive grid.
@@ -14,7 +16,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Server Components, Turbopack)
+- **Framework:** [Next.js 16+](https://nextjs.org/) (App Router, Server Components, Turbopack)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **UI Components:** [DaisyUI v5](https://daisyui.com/)
 - **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
