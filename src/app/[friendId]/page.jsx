@@ -1,4 +1,3 @@
-import React from "react";
 import friends from "../../../public/data.json";
 import FriendCard from "../components/FriendCard/FriendCard";
 import Image from "next/image";
@@ -8,6 +7,8 @@ import deletes from "../../../public/delete.png";
 import call2 from "../../../public/call2.png";
 import text2 from "../../../public/text2.png";
 import video2 from "../../../public/video2.png";
+import { toast } from "react-toastify";
+import CheckIn from "../components/Check-In/CheckIn";
 
 const FriendsDetailsPage = async ({ params }) => {
 	const { friendId } = await params;
@@ -15,17 +16,16 @@ const FriendsDetailsPage = async ({ params }) => {
 	if (!friend) {
 		alert("Not Found!");
 	}
+
 	return (
 		<div
 			className="mt-25 container mx-auto px-6 lg:px-35
                 grid grid-cols-1 md:grid-cols-5 gap-3"
 		>
-			{/* Friend Profile */}
 			<div className="md:col-span-2 md:row-span-2 bg-base-100">
 				<FriendCard friend={friend} />
 			</div>
 
-			{/* Statistics */}
 			<div className="grid grid-cols-3 gap-4 md:col-span-3">
 				<div
 					className="bg-base-100 p-5 border border-gray-100
@@ -61,7 +61,7 @@ const FriendsDetailsPage = async ({ params }) => {
 			{/* Relationship Goal */}
 			<div
 				className="md:col-span-3 bg-base-100 p-6
-                    border border-gray-100 shadow-md"
+                    border border-gray-100 shadow-md flex flex-col justify-around"
 			>
 				<div className="flex justify-between">
 					<p className="text-green-900 font-bold text-xl">Relationship goal</p>
@@ -71,7 +71,7 @@ const FriendsDetailsPage = async ({ params }) => {
 			</div>
 
 			{/* Actions */}
-			<div className="md:col-span-2 space-y-4">
+			<div className="col-span-1 md:col-span-2 space-y-4">
 				<div
 					className="bg-base-100 flex gap-2 justify-center items-center
                         shadow py-3 border border-gray-100"
@@ -98,39 +98,7 @@ const FriendsDetailsPage = async ({ params }) => {
 			</div>
 
 			{/* Quick Check-In */}
-			<div
-				className="md:col-span-3 gap-3 bg-base-100
-                    flex flex-col p-5 shadow-md
-                    border border-gray-100 rounded-md"
-			>
-				<p className="text-2xl font-semibold">Quick Check-In</p>
-
-				<div className="flex gap-3 w-full flex-1">
-					<div
-						className="bg-gray-100 flex flex-col flex-1
-                            justify-center items-center gap-2 shadow"
-					>
-						<Image src={call2} alt="Call" width={24} height={24} />
-						<p>Call</p>
-					</div>
-
-					<div
-						className="bg-gray-100 flex flex-col flex-1
-                            justify-center items-center gap-2 shadow"
-					>
-						<Image src={text2} alt="Text" width={24} height={24} />
-						<p>Text</p>
-					</div>
-
-					<div
-						className="bg-gray-100 flex flex-col flex-1
-                            justify-center items-center gap-2 shadow"
-					>
-						<Image src={video2} alt="Video" width={24} height={24} />
-						<p>Video</p>
-					</div>
-				</div>
-			</div>
+			<CheckIn friend={friend}></CheckIn>
 		</div>
 	);
 };
