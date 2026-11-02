@@ -18,80 +18,50 @@ const FriendsDetailsPage = async ({ params }) => {
 	}
 
 	return (
-		<div
-			className="mt-25 container mx-auto px-6 lg:px-35
-                grid grid-cols-1 md:grid-cols-5 gap-3"
-		>
-			<div className="md:col-span-2 md:row-span-2 bg-base-100">
+		<div className="container mx-auto mt-25 grid grid-cols-1 gap-3 px-6 md:grid-cols-5 lg:px-35">
+			<div className="bg-base-100 md:col-span-2 md:row-span-2">
 				<FriendCard friend={friend} />
 			</div>
 
 			<div className="grid grid-cols-3 gap-4 md:col-span-3">
-				<div
-					className="bg-base-100 p-5 border border-gray-100
-                        flex flex-col justify-center items-center shadow-md"
-				>
-					<p className="text-center text-green-900 font-bold text-2xl">
-						{friend.days_since_contact}
-					</p>
+				<div className="bg-base-100 flex flex-col items-center justify-center border border-gray-100 p-5 shadow-md">
+					<p className="text-center text-2xl font-bold text-green-900">{friend.days_since_contact}</p>
 					<p className="text-center">Days Since Contact</p>
 				</div>
 
-				<div
-					className="bg-base-100 p-5 border border-gray-100
-                        flex flex-col justify-center items-center shadow-md"
-				>
-					<p className="text-center text-green-900 font-bold text-2xl">
-						{friend.goal}
-					</p>
+				<div className="bg-base-100 flex flex-col items-center justify-center border border-gray-100 p-5 shadow-md">
+					<p className="text-center text-2xl font-bold text-green-900">{friend.goal}</p>
 					<p className="text-center">Goal (Days)</p>
 				</div>
 
-				<div
-					className="bg-base-100 p-5 border border-gray-100
-                        flex flex-col justify-center items-center shadow-md"
-				>
-					<p className="text-center text-green-900 font-bold text-2xl">
-						{friend.next_due_date}
-					</p>
+				<div className="bg-base-100 flex flex-col items-center justify-center border border-gray-100 p-5 shadow-md">
+					<p className="text-center text-2xl font-bold text-green-900">{friend.next_due_date}</p>
 					<p className="text-center">Next Due</p>
 				</div>
 			</div>
 
 			{/* Relationship Goal */}
-			<div
-				className="md:col-span-3 bg-base-100 p-6
-                    border border-gray-100 shadow-md flex flex-col justify-around"
-			>
+			<div className="bg-base-100 flex flex-col justify-around border border-gray-100 p-6 shadow-md md:col-span-3">
 				<div className="flex justify-between">
-					<p className="text-green-900 font-bold text-xl">Relationship goal</p>
+					<p className="text-xl font-bold text-green-900">Relationship goal</p>
 					<button className="btn btn-sm">Edit</button>
 				</div>
 				<p>Connect Every 30 Days</p>
 			</div>
 
 			{/* Actions */}
-			<div className="col-span-1 md:col-span-2 space-y-4">
-				<div
-					className="bg-base-100 flex gap-2 justify-center items-center
-                        shadow py-3 border border-gray-100"
-				>
+			<div className="col-span-1 space-y-4 md:col-span-2">
+				<div className="bg-base-100 flex items-center justify-center gap-2 border border-gray-100 py-3 shadow">
 					<Image src={snooze} alt="snooze" width={15} height={15} />
 					<span>Snooze 2 Weeks</span>
 				</div>
 
-				<div
-					className="bg-base-100 flex gap-2 justify-center items-center
-                        shadow py-3"
-				>
+				<div className="bg-base-100 flex items-center justify-center gap-2 py-3 shadow">
 					<Image src={archive} alt="archive" width={15} height={15} />
 					<span>Archive</span>
 				</div>
 
-				<div
-					className="bg-base-100 flex gap-2 justify-center items-center
-                        shadow py-3"
-				>
+				<div className="bg-base-100 flex items-center justify-center gap-2 py-3 shadow">
 					<Image src={deletes} alt="delete" width={15} height={15} />
 					<span className="text-red-500">Delete</span>
 				</div>
