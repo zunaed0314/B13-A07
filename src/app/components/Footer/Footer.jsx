@@ -24,8 +24,8 @@ const Footer = () => {
                     <BsTwitterX />
                 </div>
             </div>
-            <hr className="w-7/8 md:w-2/3 border-gray-600" />
-            <div className='flex flex-col md:flex-row justify-center md:justify-between w-7/8 md:w-2/3 mb-10 gap-4 md:gap-0'>
+            <hr className="w-7/8 md:w-6/7 border-gray-600" />
+            <div className='flex flex-col md:flex-row justify-center md:justify-between w-7/8 md:w-6/7 mb-10 gap-4 md:gap-0'>
                 <p className='text-gray-400 text-center md:text-start'>© 2026 KeenKeeper. All rights reserved.</p>
                 <div className='flex  gap-4 md:gap-10 justify-center items-center'>
                     <p className='text-gray-400'>Privacy policy</p>

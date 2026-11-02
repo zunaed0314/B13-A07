@@ -11,6 +11,19 @@ import { toast } from "react-toastify";
 import CheckIn from "../components/Check-In/CheckIn";
 import { notFound } from "next/navigation";
 
+// 1. The dynamic metadata function
+export async function generateMetadata({ params }) {
+	const { friendId } = await params;
+	const friend = friends.find((f) => f.id === parseInt(friendId));
+
+	if (!friend) return { title: "Friend Not Found" };
+
+	return {
+		title: `${friend.name}	`,
+		description: `Details and check-in history for ${friend.name}.`,
+	};
+}
+
 const FriendsDetailsPage = async ({ params }) => {
 	const { friendId } = await params;
 	const friend = friends.find((f) => f.id === parseInt(friendId));
