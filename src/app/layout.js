@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ToastProvider from "./components/ToastProvider"; // Import it
 import CheckInProvider from "./components/CheckInProvider/CheckInProvider";
+import Footer from "./components/Footer/Footer";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -21,12 +22,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-			<body className="flex min-h-full flex-col bg-gray-50!">
+		<html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<body className="flex min-h-screen flex-col bg-gray-50">
 				<CheckInProvider>
-					<Navbar></Navbar>
-					{children}
-					<ToastProvider></ToastProvider>
+					<Navbar />
+
+					<main className="flex-1">{children}</main>
+
+					<Footer />
+
+					<ToastProvider />
 				</CheckInProvider>
 			</body>
 		</html>

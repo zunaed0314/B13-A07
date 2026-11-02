@@ -2,8 +2,11 @@ import { Plus } from "lucide-react";
 import friends from "../../public/data.json";
 import FriendCard from "./components/FriendCard/FriendCard";
 import Link from "next/link";
-export default function Home() {
-	const friendsPromise = fetch("/data.json").then((res) => res.json());
+import Footer from "./components/Footer/Footer";
+
+export default function  Home() {
+
+	// const friendsPromise = fetch("/data.json").then((res) => res.json());
 	return (
 		<div className="flex flex-col items-center justify-center mt-30 gap-10 px-5 md:px-35">
 			<h1 className="text-3xl md:text-5xl text-center font-bold text-cyan-950">
@@ -50,6 +53,7 @@ export default function Home() {
 					))}
 				</div>
 			</div>
+			{/* <Footer></Footer> */}
 		</div>
 	);
 }

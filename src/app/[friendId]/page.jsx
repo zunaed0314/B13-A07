@@ -9,12 +9,13 @@ import text2 from "../../../public/text2.png";
 import video2 from "../../../public/video2.png";
 import { toast } from "react-toastify";
 import CheckIn from "../components/Check-In/CheckIn";
+import { notFound } from "next/navigation";
 
 const FriendsDetailsPage = async ({ params }) => {
 	const { friendId } = await params;
 	const friend = friends.find((f) => f.id === parseInt(friendId));
 	if (!friend) {
-		alert("Not Found!");
+		notFound();
 	}
 
 	return (
