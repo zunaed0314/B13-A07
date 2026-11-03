@@ -33,7 +33,7 @@ const FriendCard = ({ friend }) => {
 					</p>
 				))}
 			</div>
-			<p className={`${bg_color} rounded-full px-3 py-1 text-white`}>{friend.status}</p>
+			<p className={`${bg_color} rounded-full px-3 py-1 text-white text-center`}>{friend.status}</p>
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState, useRef, useEffect } from "react";
+import React, { useContext, useState, useRef, useEffect, useMemo } from "react";
 import { CheckInContext } from "../components/CheckInProvider/CheckInProvider";
 import { ChevronDown } from "lucide-react";
 import TimelineCard from "../components/TimelineCard/TimelineCard";
@@ -12,6 +12,16 @@ const TimelinePage = () => {
 	// const selectedEntries = filter ? entries.filter((entry) => entry.medium === filter) : entries;
 
 	const [search, searchOnChange] = useHook("");
+
+	// const selectedEntries = useMemo(() => {
+	// 	return entries
+	// 		.filter((e) => !filter || e.medium === filter)
+	// 		.filter((e) => {
+	// 			if (!search) return true;
+	// 			const q = search.toLowerCase();
+	// 			return e.name?.toLowerCase().includes(q) || e.date?.toString().toLowerCase().includes(q);
+	// 		});
+	// }, [entries, filter, search]);
 
 	const selectedEntries = entries
 		.filter((e) => !filter || e.medium === filter)
@@ -31,7 +41,7 @@ const TimelinePage = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex-1 space-y-5 pt-20 px-5 md:px-10 lg:px-35">
+		<div className="container mx-auto flex-1 space-y-5 px-5 pt-20 md:px-10 lg:px-35">
 			<h1 className="text-3xl font-bold">Timeline</h1>
 
 			<div className="flex items-center gap-5">
